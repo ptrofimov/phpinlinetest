@@ -1,12 +1,12 @@
 <?php
 /**
- * PhpInlineTest - console tool to test PHP functions and methods
+ * PhpInlineTest - script to run inline-tests for PHP functions
  * Usage: php phpinlinetest.php [file|dir] [file|dir] ...
  * @link https://github.com/ptrofimov/phpinlinetest
  * @author Petr Trofimov
  * @version 0.1
  */
-error_reporting(0);
+error_reporting(E_ALL);
 ini_set('display_errors', false);
 
 function getFiles($argc, array $argv) {
@@ -22,8 +22,9 @@ function getFiles($argc, array $argv) {
 		while (($file = readdir($dh)) !== FALSE) {
 			if (in_array($file, array('.', '..'))) continue;
 			$file = $dir . DIRECTORY_SEPARATOR . $file;
-			if (is_file($file) && pathinfo($file, PATHINFO_EXTENSION) == 'php') $files[] = $file;
-			elseif (is_dir($file)) array_push($dirs, $file);
+			if (is_file($file)) {
+				if (pathinfo($file, PATHINFO_EXTENSION) == 'php') $files[] = $file;
+			} elseif (is_dir($file)) array_push($dirs, $file);
 			else exit('Unknown path: ' . $file . PHP_EOL);
 		}
 		closedir($dh);
