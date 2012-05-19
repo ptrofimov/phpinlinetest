@@ -6,7 +6,7 @@
 function sort(array $arr) {
 	$size = sizeof($arr) - 1;
 	for ($i = $size; $i >= 0; $i--) {
-		for ($j = 0; $j <= ($i-1); $j++)
+		for ($j = 0; $j <= ($i - 1); $j++)
 			if ($arr[$j] > $arr[$j + 1]) {
 				$k = $arr[$j];
 				$arr[$j] = $arr[$j + 1];
