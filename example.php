@@ -1,7 +1,7 @@
 <?php
 /**
- * Bubble sort: inline-test example
- * @test (array(2,1,3)) == array(1,2,3)
+ * Inline test example for bubble sort function
+ * @assert (array(2,1,3)) == array(1,2,3)
  */ 
 function sort(array $arr) {
 	$size = sizeof($arr) - 1;
@@ -14,4 +14,14 @@ function sort(array $arr) {
 			}
 	}
 	return $arr;
+}
+class A {
+	/**
+	 * Inline test example
+	 *     for private class method
+	 * @assert (2, 2) == 4
+	 */
+	private function _add($a, $b) {
+		return $a + $b;
+	}
 }

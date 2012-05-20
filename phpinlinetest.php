@@ -37,8 +37,8 @@ function getAsserts($comment) {
 	$lines = preg_split("#\n|\r#", $comment);
 	foreach ($lines as $line) {
 		$line = trim($line, "\r\n/* \t");
-		if (substr($line, 0, 5) == '@test') {
-			$assert = trim(substr($line, 5));
+		if (substr($line, 0, 7) == '@assert') {
+			$assert = trim(substr($line, 7));
 			if ($assert) $asserts[] = $assert;
 		}
 	}
@@ -124,7 +124,7 @@ register_shutdown_function('shutdownFunction');
 $files = $tests = $succeed = $failed = 0;
 foreach (getFiles($argc, $argv) as $file) {
 	$code = file_get_contents($file);
-	if (strpos($code, '@test') === FALSE) continue;
+	if (strpos($code, '@assert') === FALSE) continue;
 	$functions = getFunctions($code);
 	if (!$functions) continue;
 	echo $file, PHP_EOL;
