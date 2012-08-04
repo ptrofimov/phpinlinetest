@@ -49,19 +49,19 @@ Step 4. Enjoy!
 
 # PhpInlineTest ![Русская версия](http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/22px-Flag_of_Russia.svg.png)
 
-*PhpInlineTest is script to run inline tests for PHP functions and class methods*
+*PhpInlineTest - это скрипт для запуска inline-тестов для PHP функций и методов класса*
 
-### WTF is inline tests?
+### Что это еще такое за inline-тесты?
 
-Inline tests are asserts embedded right into PHPDOC-comments.
+Inline-тесты - это тесты, встроенные непосредственно в PHPDOC-комментарии.
 
-__Benefits__
-* **Easy and fast** to add tests for your functions.
-* Tests can complement/replace **documentation** for method.
-* Can be written for **private/protected** class methods.
-* You will **never lose** them: they are always inside scripts.
+__Плюсы__
+* **Легко и быстро** можно добавить тесты для ваших функций.
+* Тесты могут замещать/дополнять **документацию** для метода.
+* Могут быть написаны для **закрытых** методов класса.
+* Вы **никогда не потеряете** их: тесты всегда внутри скрипта.
 
-__Downsides__
+__Минусы__
 * Good only for **simple** test cases.
 * Can be written only for **isolated** functions: input - arguments, output - return value.
 
