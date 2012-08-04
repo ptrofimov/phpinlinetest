@@ -62,19 +62,19 @@ __Плюсы__
 * Вы **никогда не потеряете** их: тесты всегда внутри скрипта.
 
 __Минусы__
-* Good only for **simple** test cases.
-* Can be written only for **isolated** functions: input - arguments, output - return value.
+* Подходят только для **простых** случаев.
+* Могут быть написаны только для **изолированных** функций: вход - аргументы, выход - возвращаемое значение.
 
-### How to use? It is easy:
+### Как их использовать? Это просто:
 
-Step 1. Write assert line in PHPDOC-comment for class method or function:
+Шаг 1. Напишите строку теста функции в PHPDOC-комментарии:
 
 ```php
 <?php
 class A {
 	/**
-	 * Inline test example
-	 *     for private class method
+	 * Пример inline-теста
+	 *     для закрытого метода класса
 	 * @assert (2, 2) == 4
 	 */
 	private function _add($a, $b) {
@@ -83,13 +83,13 @@ class A {
 }
 ```
 
-Step 2. Download [latest version of phpinlinetest](https://github.com/ptrofimov/phpinlinetest/blob/master/phpinlinetest.php).
+Шаг 2. Скачайте [последнюю версию phpinlinetest](https://github.com/ptrofimov/phpinlinetest/blob/master/phpinlinetest.php).
 
-Step 3. Run phpinlinetest to check your asserts:
+Шаг 3. Запустите phpinlinetest, чтобы проверить ваши тесты:
 
 	$ php phpinlinetest.php
 	.\example.php
 	Test "_add(2, 2) == 4": OK
 	Files: 1, tests: 1, succeed: 1, failed: 0
 	
-Step 4. Enjoy!
+Шаг 4. Наслаждайтесь!
