@@ -93,3 +93,7 @@ class A {
 	Files: 1, tests: 1, succeed: 1, failed: 0
 	
 Шаг 4. Наслаждайтесь!
+
+--------------------------------------------------
+
+Keywords: phpinlinetest, php, inline, test, unit, doctest, testing, documentation, phpdoc, comments, methods, private
