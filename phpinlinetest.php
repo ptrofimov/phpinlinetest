@@ -87,6 +87,7 @@ function getFunctions($code) {
 }
 
 function testFunctions(array $functions) {
+	global $errstr;
 	foreach ($functions as $function) {
 		eval($function['code']);
 		$GLOBALS['tests'] += count($function['asserts']);
